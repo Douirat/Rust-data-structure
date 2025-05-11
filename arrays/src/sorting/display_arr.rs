@@ -1,5 +1,5 @@
-pub fn display_arr(vector: Vec<isize>){
-    for val in vector{
+pub fn display_arr(arr: [isize; 12]){
+    for val in arr{
         println!("{}", val);
     }
 }

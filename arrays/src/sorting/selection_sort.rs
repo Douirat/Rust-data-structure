@@ -1,18 +1,17 @@
-pub fn selection_sort(arr: &mut Vec<isize>) {
-    println!("{:?}", arr);
-    for i in 0..arr.len(){
-        let mut min = i;
+pub fn selection_sort(arr: &mut [isize; 12]) {
+    for i in 0..arr.len()-1{
         let mut swapped = false;
-        for j in i+1..arr.len(){
+        let mut min = i;
+        for j  in i+1..arr.len(){
             if arr[j] <= arr[min] {
                 min = j;
                 swapped = true;
             }
         }
-        if swapped {
-            arr[min] = arr[i] + arr[min];
-            arr[i] = arr[min]  - arr[i];
-            arr[min] = arr[min] - arr[i];
+        if swapped{
+            let temp = arr[i];
+            arr[i] = arr[min];
+            arr[min] = temp;
         }
     }
 }
