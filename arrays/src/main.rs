@@ -5,6 +5,8 @@ use crate::sorting::selection_sort::selection_sort;
 use crate::sorting::insertion_sort::insertion_sort;
 use crate::sorting::display_arr::display_arr;
 use crate::sorting::display_vector::display_vector;
+use crate::sorting::quick_sort::quick_sort;
+use crate::sorting::count_sort::count_sort;
 
 fn main() {
     println!("\n========> bubble sort! <===========\n");
@@ -19,4 +21,11 @@ fn main() {
     let mut array1 = [14, 5, 26, 6, 98, 7, 45, 2, 14, 5, 87, 56];
     insertion_sort(&mut array1);
     display_arr(array1);
+    println!("\n=========> Quick sort <==========\n");
+    let mut array2 = [14, 5, 26, 6, 98, 7, 45, 2, 14, 5, 87, 56];
+    quick_sort(&mut array2, 0, 11);
+    display_arr(array2);
+    println!("\n=========> count sort <==========\n");
+    let mut vec_arr = vec![4, 2, 4, 2, 1, 5, 2, 1, 5, 2];
+    count_sort(&mut vec_arr);
 }
