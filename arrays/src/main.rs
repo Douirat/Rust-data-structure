@@ -28,4 +28,8 @@ fn main() {
     println!("\n=========> count sort <==========\n");
     let mut vec_arr = vec![4, 2, 4, 2, 1, 5, 2, 1, 5, 2];
     count_sort(&mut vec_arr);
+    display_vector(vec_arr);
+    println!("\n=========> radix sort <==========\n");
+    let  arr3 =  [170, 45, 75, 90, 322, 74, 333, 534, 802, 24, 2, 66];
+    display_arr(arr3);
 }
