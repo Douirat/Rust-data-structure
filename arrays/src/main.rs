@@ -7,6 +7,8 @@ use crate::sorting::display_arr::display_arr;
 use crate::sorting::display_vector::display_vector;
 use crate::sorting::quick_sort::quick_sort;
 use crate::sorting::count_sort::count_sort;
+use crate::sorting::radix_sort::radix_sort;
+use crate::sorting::merge_sort::merge_sort;
 
 fn main() {
     println!("\n========> bubble sort! <===========\n");
@@ -30,6 +32,11 @@ fn main() {
     count_sort(&mut vec_arr);
     display_vector(vec_arr);
     println!("\n=========> radix sort <==========\n");
-    let  arr3 =  [170, 45, 75, 90, 322, 74, 333, 534, 802, 24, 2, 66];
+    let mut arr3 =  [170, 45, 75, 90, 322, 74, 333, 534, 802, 24, 2, 66];
+    radix_sort(&mut arr3);
     display_arr(arr3);
+ println!("\n=========> merge sort <==========\n");
+    let mut arr4 =  [58, 85, 95, 12, 45, 65, 78, 96, 32, 45, 98, 75, 35, 48, 95, 12];
+    let size = arr3.len();
+    merge_sort(&mut arr4, 0, size);
 }
