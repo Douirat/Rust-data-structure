@@ -36,7 +36,13 @@ fn main() {
     radix_sort(&mut arr3);
     display_arr(arr3);
  println!("\n=========> merge sort <==========\n");
-    let mut arr4 =  [58, 85, 95, 12, 45, 65, 78, 96, 32, 45, 98, 75, 35, 48, 95, 12];
+    let vects =  vec![58, 85, 95, 12, 45, 65, 78, 96, 32, 45, 98, 75, 35, 48, 95, 12];
     let size = arr3.len();
-    merge_sort(&mut arr4, 0, size);
+    let sorted = merge_sort(vects);
+    display_vector(sorted)
+
+    println!("\n=========> Linear search: <==========\n");
+    let vects =  [58, 85, 95, 12, 45, 65, 78, 96, 32, 45, 98, 75, 35, 48, 95, 12];
+    let result := linear_search(vec)
+    println!("the index of 96 is: {}", result)
 }
